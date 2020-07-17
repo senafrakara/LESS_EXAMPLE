@@ -24,13 +24,13 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
     transform: rotate(90deg);
     width: 100%;
     height: 60px;
-    align-items:flex-end;
-    ul{
-        li{
-            a{
-                color: wheat;
-                font-size:15px;
+    align-items: flex-end;
 
+    ul {
+        li {
+            a {
+                color: wheat;
+                font-size: 15px;
             }
         }
     }
@@ -62,9 +62,94 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
             color: #f1f1f1;
         }
     }
+
+    h1 {
+        padding: 6px 8px 6px 16px;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transform: rotate(180deg);
+        margin-top: 61.5vh;
+    }
 }
 
+.brand-pos{
+    margin-left:-20vh;
+}
 
+/*
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}  */
+.navbar.transparent.navbar-inverse .navbar-inner {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0%, rgba(0,0,0,0.00)),color-stop( 100%, rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+
+.nav-items {
+    a {
+        font-size: 20px;
+        color: #818181 !important;
+
+        &:hover {
+            color: #f1f1f1 !important;
+        }
+    }
+
+    
+}
+
+.second-nav{
+    margin-left:-2vh;
+}
+/*
+.nav-items.second {
+    .link {
+        margin-right: -2vh;
+
+        a {
+            font-size: 20px;
+            color: #818181 !important;
+     
+            &:hover {
+                color: #f1f1f1 !important;
+            }
+        }
+    }
+
+    a {
+        font-size: 20px;
+        color: #818181 !important;
+        margin-left: 1vh;
+        margin-right: 1vh;
+
+        &:hover {
+            color: #f1f1f1 !important;
+        }
+    }
+}
+     */
+@media (min-width: 992px) {
+    .navbar-expand-lg {
+        .navbar-nav {
+            .nav-link {
+                padding-right: 2.5rem;
+                padding-left: .5rem;
+            }
+        }
+    }
+}
 
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
@@ -72,6 +157,27 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
     padding: 0px 10px;
 }
 
+.container {
+    .navbar-brand {
+        color: #818181 !important;
+
+        &:hover {
+            color: #f1f1f1 !important;
+        }
+    }
+}
+/*
+.nav-link {
+
+    .a {
+        color: #818181 !important;
+
+        &:hover {
+            color: #f1f1f1 !important;
+        }
+    }
+}
+    */
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
@@ -82,17 +188,58 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
     }
 }
 
-*{
+
+* {
     box-sizing: border-box;
-    
 }
 
 body {
-    font-family: 'Playfair Display';
+    background: #1f1f1f url(img/index_background.png) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    padding-top: 40px;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background: rgb(38,44,64);
-    background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.4822303921568627) 100%);
+ //   background: rgb(38,44,64);
+  //  background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.4822303921568627) 100%);
+}
+
+.whole-area {
+    background: #1f1f1f url(img/index_background.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 40px;
+    margin: 0;
+    padding: 0;
+}
+.tcb-bs-fullscreen {
+    height: 100%;
+
+    .carousel,
+    .item,
+    .active {
+        height: 100%;
+    }
+
+    .carousel-inner {
+        height: 100%;
+    }
+}
+/****************************
+USE BACKGROUND IMAGES IN CAROUSEL SLIDER
+*****************************/
+.carousel-bg {
+    .carousel-inner {
+        .item {
+            background-color: darkslategrey;
+            background-size: cover;
+            background-position: center;
+            min-height: 360px;
+        }
+    }
 }
 /*
 ul {
