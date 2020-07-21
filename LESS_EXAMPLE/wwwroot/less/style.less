@@ -1,5 +1,5 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
-/*background: rgb(38,44,64);
+﻿/*@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+background: rgb(38,44,64);
 background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.4822303921568627) 100%);
  Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. 
@@ -40,7 +40,7 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
     height: 100%;
     width: 160px;
     position: fixed;
-    z-index: 1;
+    z-index: 999999;
     top: 0;
     left: 0;
     background-color: #111;
@@ -52,14 +52,14 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
         padding: 6px 8px 6px 16px;
         text-decoration: none;
         font-size: 25px;
-        color: #818181;
+        color: ghostwhite;
         display: block;
-        transform: rotate(-90deg);
+        transform: rotate(-270deg);
         margin-top: 10vh;
 
 
         &:hover {
-            color: #f1f1f1;
+            color: #edeaea;
         }
     }
 
@@ -69,24 +69,21 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
         color: #818181;
         display: block;
         transform: rotate(180deg);
-        margin-top: 61.5vh;
+        margin-top: 58vh;
     }
 }
 
-.brand-pos{
-    margin-left:-20vh;
+.brand-pos {
+    margin-left: 30vh;
+    color: ghostwhite !important;
+
+    &:hover {
+        color: #edeaea !important;
+    }
 }
 
-/*
-.carousel-item {
-    height: 100vh;
-    min-height: 350px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}  */
+
+
 .navbar.transparent.navbar-inverse .navbar-inner {
     border-width: 0px;
     -webkit-box-shadow: 0px 0px;
@@ -97,59 +94,97 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
     background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
 }
 
+.gradient {
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4822303921568627) 50%);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4822303921568627) 50%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4822303921568627) 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+    height:200px;
+
+}
+.navbar-height{
+    height:115px;
+}
 .nav-items {
     a {
-        font-size: 20px;
-        color: #818181 !important;
+        font-size: 16px;
+        color: ghostwhite !important;
 
         &:hover {
-            color: #f1f1f1 !important;
+            color: #edeaea !important;
         }
     }
+   
+}
 
+.top-height{
+    top:33px;
+}
+body {
+    background-color: #545252;
+    color: #fff;
+}
+
+.carousel {
+    height: 750px;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*.next-prev {
+    top: 900px;
+    -webkit-transform: none;
+    transform: none;
+}*/
+.carousel-control-prev,
+.carousel-control-next {
+    align-items: flex-end;
+    top:150px;
+     /* Aligns it at the bottom */
+}
+/*.carousel-control-next{
+    .next-prev{
+        right:10px;
+    }
+
+}*/
+.carousel-control-prev {
+        left: auto;
+        right: 60px;
     
 }
 
-.second-nav{
-    margin-left:-2vh;
+
+.second-nav {
+    margin-left: 65vh !important;
+    /*float:right;*/
 }
-/*
-.nav-items.second {
-    .link {
-        margin-right: -2vh;
 
-        a {
-            font-size: 20px;
-            color: #818181 !important;
-     
-            &:hover {
-                color: #f1f1f1 !important;
-            }
-        }
-    }
-
-    a {
-        font-size: 20px;
-        color: #818181 !important;
-        margin-left: 1vh;
-        margin-right: 1vh;
-
-        &:hover {
-            color: #f1f1f1 !important;
-        }
-    }
+.border-button {
+    border: 2px solid red;
+    border-radius: 22px;
 }
-     */
 @media (min-width: 992px) {
     .navbar-expand-lg {
         .navbar-nav {
             .nav-link {
-                padding-right: 2.5rem;
-                padding-left: .5rem;
+                padding-right: 52px;
+                padding-left: 16px;
             }
         }
     }
 }
+
+
 
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
@@ -159,25 +194,15 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
 
 .container {
     .navbar-brand {
-        color: #818181 !important;
+        color: ghostwhite !important;
 
         &:hover {
-            color: #f1f1f1 !important;
+            color: #edeaea !important; 
+            
         }
     }
 }
-/*
-.nav-link {
 
-    .a {
-        color: #818181 !important;
-
-        &:hover {
-            color: #f1f1f1 !important;
-        }
-    }
-}
-    */
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
@@ -205,7 +230,7 @@ body {
     -webkit-font-smoothing: antialiased;
  //   background: rgb(38,44,64);
   //  background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.4822303921568627) 100%);
-}
+} 
 
 .whole-area {
     background: #1f1f1f url(img/index_background.png) no-repeat center center;
@@ -238,257 +263,182 @@ USE BACKGROUND IMAGES IN CAROUSEL SLIDER
             background-size: cover;
             background-position: center;
             min-height: 360px;
-        }
-    }
-}
-/*
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100px;
-    backface-visibility: hidden;
-
-    &__list {
-        display: flex;
-        flex-flow: column wrap;
-        height: 85vh;
-        transform: translate(0, -100%);
-        transition: @ease;
-
-        &--active {
-            transform: translate(0, 0);
-        }
-    }
-
-    &__item {
-        flex: 1;
-        position: relative;
-    }
-
-    &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        text-decoration: none;
-        font-size: 24px;
-        background: @nav-bg;
-        transition: @ease;
-
-        &:hover {
-            background: mix(black, @nav-bg, 10);
-        }
-    }
-
-    @media (max-width: 640px) {
-        width: 70px;
-
-        &__list {
-            height: 90vh;
+           
         }
     }
 }
 
-.burger {
-    height: 15vh;
+.hr-text {
+    line-height: 1em;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    background: @nav-bg;
-    cursor: pointer;
-    transition: @ease;
+    outline: 0;
+    border: 0;
+    color: white;
+    text-align: center;
+    height: 1.5em;
+    opacity: .5;
 
-    &:hover {
-        background: mix(black, @nav-bg, 10);
+    &:before {
+        content: '';
+        // use the linear-gradient for the fading effect
+        // use a solid background color for a solid bar
+        position: absolute;
+        border: 1px solid white !important;
+        left: 0;
+        top: 50%;
+        width: 100px;
+        height: 1px;
     }
 
-    &__patty {
+    &:after {
+        content: attr(data-content);
         position: relative;
-        height: 2px;
-        width: 40px;
-        background: white;
+        display: inline-block;
+        color: white !important;
+        padding: 0 .5em;
+        line-height: 1.5em;
+        // this is really the only tricky part, you need to specify the background color of the container element...
+        color: white;
+        background-color: transparent;
+        margin-left: -456px;
+    }
+}
+.full-left {
+    background-color: transparent;
+    width: 903px !important;
+    height: 600px;
+    position: absolute;
+    top: 190px;
+    left: 380px;
+    z-index: 5555555555555555;
+    margin-bottom: 30px;
+    margin-top: 30px;
 
-        &:before {
-            content: "";
+    .third-div {
+        margin-left: 15px;
+    }
+
+
+    .last-div {
+        margin-top: 40vh;
+        width: 200px;
+
+        .circle-div {
+            border-radius: 200px 200px 200px 200px;
+            -moz-border-radius: 200px 200px 200px 200px;
+            -webkit-border-radius: 200px 200px 200px 200px;
+            border: 0px solid #000000;
+            background-color: #e62b2b;
+            width: 80px;
+            height: 80px;
             position: absolute;
-            top: -10px;
-            left: 0;
-            height: 2px;
-            width: 100%;
-            background: white;
+            float: left;
+
+            .red-play {
+                color: white;
+                position: relative;
+                margin-top: 22px;
+            }
+
+            .fas {
+                font-size: 2em;
+            }
         }
 
+        .about-us {
+            float: right;
+
+            .about {
+                margin-top: 7px;
+                padding-right:25px;
+            }
+
+            .hr-text2 {
+                line-height: 1em;
+                position: relative;
+                outline: 0;
+                border: 0;
+                color: white;
+                text-align: center;
+                height: 1.5em;
+                opacity: .5;
+
+                &:before {
+                    content: ' ';
+                    // use the linear-gradient for the fading effect
+                    // use a solid background color for a solid bar
+                    position: absolute;
+                    border: 1px solid white !important;
+                    left: 0;
+                    top: 50%;
+                    width: 100px;
+                    height: 1px;
+                }
+
+                &:after {
+                    content: 'Promotion video';
+                    position: relative;
+                    display: inline-block;
+                    color: white !important;
+                    padding: 0 .5em;
+                    line-height: 1.5em;
+                    // this is really the only tricky part, you need to specify the background color of the container element...
+                    color: red;
+                    background-color: transparent;
+                    margin-left: -6px;
+                }
+            }
+        }
+    }
+
+    .craft-design {
+        color: white;
+        margin-top: 10px;
+        float: left;
+        position: relative;
+        font-size: 120px;
+        font-weight: bold;
+        left: 10px;
+        margin-top: 0px !important;
+        line-height: 110px;
+        /*&:after {
+            content: '.';
+            color: red;
+            font-size: 120px;
+            border-radius: 30px;
+        }*/
         &:after {
-            content: "";
-            position: absolute;
-            top: 10px;
-            left: 0;
-            height: 2px;
-            width: 100%;
-            background: white;
+            content: ' \25CF';
+            font-size: 45px;
+            color: red;
+            left: -38px;
+            position: relative;
         }
     }
 
-    &__patty,
-    &__patty:before,
-    &__patty:after {
-        will-change: transform;
-        transition: @ease;
+    .second-div {
+        margin-top: 35px;
     }
-
-    &--active {
-        .burger__patty {
-            transform: rotate(90deg);
-
-            &:before {
-                transform: rotate(-45deg) translate(-7px,-7px) scaleX(0.7);
-            }
-
-            &:after {
-                transform: rotate(45deg) translate(-7px,7px) scaleX(0.7);
-            }
-        }
+    /* .dot {
+       height:25px;
+       width:25px;
+       color:red;
+       border-radius: 50%;
+       display:inline-block;
     }
-
-    @media (max-width: 640px) {
-        height: 10vh;
-
-        &__patty {
-            transform: scale(0.8);
-        }
-
-        &--active {
-            .burger__patty {
-                transform: scale(0.8) rotate(90deg);
-            }
-        }
-    }
-}
-
-.panel {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-
-    &__wrapper {
-        padding: 7vh 7vw;
-        perspective: 1000px;
-    }
-
-    &__content {
-        will-change: transform;
-        transform: @content-animation;
-        transform-origin: center 80%;
-        opacity: 0;
-        transition: @ease;
-
-        &--active {
-            transform: none;
-            opacity: 1;
-        }
-    }
-
-    &__headline {
-        font-weight: 700;
-        opacity: 0.8;
-        font-size: 48px;
-        margin: 0 0 25px 0;
-    }
-
-    p {
-        margin: 0 0 25px 0;
-        color: lighten(black, 10);
+*/
+    /*.circle:before {
+        content: ' \25CF';
+        font-size: 100px;
+        color: red;
+        left: -5px;
+    }*/
+    .create-tech {
+        color: #fff !important;
+        float: left;
         font-size: 24px;
-        max-width: 800px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    &__block {
-        height: 3px;
-        background: fade(black, 50%);
-        margin: 0 0 25px 0;
-    }
-
-    @media (max-width: 640px) {
-
-        &__headline {
-            font-size: 36px;
-        }
-
-        &__wrapper {
-            padding: 10vh 10vw;
-        }
-
-        p {
-            font-size: 16px;
-        }
+        font-weight: lighter;
+        margin-top: -10px;
+        line-height: 25px;
     }
 }
-
-.c-blue {
-    color: @blue;
-}
-
-.c-red {
-    color: @red;
-}
-
-.c-green {
-    color: @green;
-}
-
-.c-yellow {
-    color: @yellow;
-}
-
-.b-blue {
-    background: @blue;
-}
-
-.b-red {
-    background: @red;
-}
-
-.b-green {
-    background: @green;
-}
-
-.b-yellow {
-    background: @yellow;
-}
-
-.logo {
-    position: fixed;
-    bottom: 3vh;
-    right: 3vw;
-    z-index: 2;
-
-    img {
-        width: 65px;
-        transition: @ease;
-        transform: rotate(0);
-
-        &:hover {
-            transform: rotate(180deg) scale(1.1);
-        }
-    }
-}*/

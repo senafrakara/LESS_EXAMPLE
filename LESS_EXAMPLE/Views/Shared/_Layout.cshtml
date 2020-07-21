@@ -10,199 +10,157 @@
     <link rel="stylesheet/less" type="text/css" href="style.css" />
     <!--<script src="//cdn.jsdelivr.net/npm/less"></script> -->
     <link href="~/less/style.min.css" rel="stylesheet" />
-    <style>
-      
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  
+
+
 </head>
 <body>
-    <header>
-
-        <!--<div class="vertical-div">
-
-        <ul>
-            <li>
-                <a href="#1">BEHANCE</a>
-            </li>
-            <li>
-                <a href="#2">LINKEDIN</a>
-            </li>
-
-        </ul>
-    </div> -->
-        <div class="col-md-2">
-            <div class="sidenav">
+    <header> 
+        <div class="row">
+            <div class="col-md-2">
+                <div class="sidenav">
 
 
-                <a href="#about">BEHANCE</a>
-                <a href="#services">LINKEDIN</a>
-                <h1>Nursena.</h1>
-            </div>
-        </div>
-        <nav class="navbar transparent navbar-expand-lg  fixed-top">
-            <div class="container">
-                <a class="navbar-brand navbar-brand mr-0 mr-md-5 brand-pos" href="#" style="text-align:left">CROPE.</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav bd-navbar-nav flex-row">
-
-                        <li class="nav-item nav-items">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item nav-items">
-                            <a class="nav-link" href="#">Coses</a>
-                        </li>
-                        <li class="nav-item nav-items">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ml-auto second-nav">
-
-                        <li class="nav-item nav-items ">
-                            <a class="nav-link" href="#">+1 11215 15121 </a>
-                        </li>
-                        <li class="nav-item nav-items ">
-                            <a class="nav-link" href="#">Get a quote</a>
-                        </li>
-
-                    </ul>
-
+                    <a href="#about">BEHANCE</a>
+                    <a href="#services">LINKEDIN</a>
+                    <h1>Nursena.</h1>
                 </div>
             </div>
-        </nav>
-        <div class="owl-carousel owl-theme"> <!--Without css codes, it looks like a list whose images below themselves-->
-            <div class="item">
-                <img src="https://picsum.photos/id/239/1000/500" />
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/id/232/1000/500" />
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/id/231/1000/500" />
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/id/236/1000/500" />
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/id/235/1000/500" />
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/id/234/1000/500" />
-            </div>
+            <div class="col-md-10">
+                <nav class="navbar transparent  navbar-expand-lg  fixed-top navbar-height ">
+                    <div class="container-fluid">
+                        <a class="navbar-brand navbar-brand mr-0 mr-md-5 brand-pos" href="#" style="text-align:left">CROPE.</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav bd-navbar-nav flex-row">
 
+                                <li class="nav-item nav-items">
+                                    <a class="nav-link" href="#">Services</a>
+                                </li>
+                                <li class="nav-item nav-items">
+                                    <a class="nav-link" href="#">Coses</a>
+                                </li>
+                                <li class="nav-item nav-items">
+                                    <a class="nav-link" href="#">Contact Us</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ml-auto second-nav">
+
+                                <li class="nav-item nav-items ">
+                                    <a class="nav-link" href="#">+1 11215 15121 </a>
+                                </li>
+                                <li class="nav-item nav-items border-button ">
+                                    <a class="nav-link " href="#">Get a quote</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
         </div>
-
 
 
     </header>
     <div class=" container-fluid">
+        
 
         @RenderBody()
-        <!--<div class="tcb-bs-fullscreen">
-        <div id="carousel-example-generic" class="carousel slide carousel-bg" data-ride="carousel">
+       
+        <div class="row">
+            <div class="col-md-5">
+                <div class="col-md-2">
+              
+                </div>
+                <div class="col-md-3">
+                    @*<div class="main-text">
+                       <span class="main-span">Creative Ideas</span>
+                    </div>*@
 
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
+                    <div class="float-xl-right full-left">
+                        <div class="align-items-xl-start">
+                            <hr class="hr-text" data-content="CREATIVE IDEAS" />
+                        </div>
+                        <div class="align-items-xl-start second-div">
+                            <p class="craft-design">
+                                Craft Design Solutions
+                            </p>
 
-            <div class="carousel-inner" role="listbox">
-                <div class="item active" style=" background-image: url(img/index_background.png);">
-                    <div class="carousel-caption">
-                        ...
+                        </div>
+
+                        <div class="align-items-xl-start third-div">
+                            <p class="create-tech">We create new technologies for your business thanks</p>
+                            <br />
+                            <p class="create-tech"> to our wonderful team of professionals.</p>
+                            
+                        </div>
+
+                        <div class="align-items-xl-start last-div">
+                            <div class="circle-div">
+                                <center>
+                                    <i class="fas fa-play red-play"></i>
+                                </center>
+
+                            </div>
+                            <div class="about-us">
+                                <div class="about">ABOUT US</div>
+
+                                <div class="hr-text2">
+
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="item" style=" background-image: url(img/index_background.png);">
-                    <div class="carousel-caption">
-                        ...
+     
+            </div>
+            <div class="col-md-7">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="~/img/index_background.png" alt="First slide" />
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="~/img/index_background.png" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="~/img/index_background.png" alt="Third slide">
+                        </div>
                     </div>
-                </div>
-                <div class="item" style="background-image: url(img/index_background.png);">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
+                    <a class="carousel-control-prev next-prev float-right" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next next-prev float-right" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-    </div> -->
-        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-         <ol class="carousel-indicators">
-             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-         </ol>
-         <div class="carousel-inner" role="listbox">
-
-             <div class="carousel-item active" style=" background-image: url(img/index_background.png);">
-                 <div class="carousel-caption d-none d-md-block" >
-                     <h2 class="display-4">First Slide</h2>
-                     <p class="lead">This is a description for the first slide.</p>
-                 </div>
-             </div>
-
-             <div class="carousel-item"  style=" background-image: url(img/index_background.png);" >
-                 <div class="carousel-caption d-none d-md-block" >
-                     <h2 class="display-4">Second Slide</h2>
-                     <p class="lead">This is a description for the second slide.</p>
-                 </div>
-             </div>
-
-             <div class="carousel-item" style=" background-image: url(img/index_background.png);">
-                 <div class="carousel-caption d-none d-md-block">
-                     <h2 class="display-4">Third Slide</h2>
-                     <p class="lead">This is a description for the third slide.</p>
-                 </div>
-             </div>
-         </div>
-
-     </div>  -->
-
-
-        <section class="main-slider">
-            <div class="container-fluid sl">
-                <!-- Note that `.slider-content` wraps `.row` -->
-                <div class="slider-content">
-                    <div class="row justify-content-center align-items-lg-center">
-                        <div class="left-side d-flex flex-column col-11 col-sm-7 col-md-5 col-lg-4 col-xl-3">
-                            <!--Text here-->
-                        </div>
-                        <div class="right-side text-center col-lg-8 col-xl-6">
-                            <!-- Images of people -->
-                            <ul class="row people-list justify-content-center">
-                                
-                                <li class="offset-lg-3 offset-xl-4"><img class="img-fluid" src="~/img/index-background.png"></li>
-                               
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- …Other slides… -->
-            </div>
-        </section>
-
     </div>
 
-        <footer>
-        </footer>
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-        @RenderSection("Scripts", required: false)
-    </body>
-    </html>
+    <footer>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>-->
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
