@@ -3,12 +3,19 @@ background: rgb(38,44,64);
 background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.4822303921568627) 100%);
  Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
 
 background: rgb(38,44,64);
 background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.4822303921568627) 100%);
 
 */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v21/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf) format('truetype');
+}
 .vertical-div {
   background-color: black;
   transform: rotate(90deg);
@@ -31,26 +38,68 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
   overflow-x: hidden;
   padding-top: 20px;
   transform: rotate(-180deg);
+  /*    a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: ghostwhite;
+        display: block;
+        transform: rotate(-270deg);
+        margin-top: 30px;
+
+
+        &:hover {
+            color: #edeaea;
+        }
+    }*/
 }
-.sidenav a {
+.sidenav .behance {
+  line-height: 200px;
+  padding-left: 35px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: ghostwhite;
   display: block;
   transform: rotate(-270deg);
-  margin-top: 10vh;
+  margin-top: 30px;
 }
-.sidenav a:hover {
+.sidenav .behance:hover {
   color: #edeaea;
 }
-.sidenav h1 {
+.sidenav .linkedin {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  line-height: 177px;
   padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: ghostwhite;
+  display: block;
+  transform: rotate(-270deg);
+  margin-top: 30px;
+}
+.sidenav .linkedin:hover {
+  color: #edeaea;
+}
+.sidenav .brand {
+  height: 410px;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-direction: row-reverse;
+}
+.sidenav .brand h1 {
+  align-self: flex-end;
+  padding: 20px 8px 6px 16px;
   font-size: 25px;
   color: #818181;
-  display: block;
   transform: rotate(180deg);
-  margin-top: 58vh;
 }
 .brand-pos {
   margin-left: 30vh;
@@ -90,8 +139,7 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
   top: 33px;
 }
 body {
-  background-color: #545252;
-  color: #fff;
+  background-color: #151313 !important;
 }
 .carousel {
   height: 750px;
@@ -104,6 +152,9 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+.carousel-pos {
+  position: absolute;
 }
 /*.next-prev {
     top: 900px;
@@ -126,26 +177,30 @@ body {
   left: auto;
   right: 60px;
 }
+.first-nav {
+  width: 700px;
+}
 .second-nav {
-  margin-left: 65vh !important;
   /*float:right;*/
+  width: 666px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: row-reverse;
 }
 .border-button {
-  border: 2px solid red;
+  border: 2px solid #f00;
   border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 156px;
 }
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 52px;
     padding-left: 16px;
   }
-}
-.main {
-  margin-left: 160px;
-  /* Same as the width of the sidenav */
-  font-size: 28px;
-  /* Increased text to enable scrolling */
-  padding: 0px 10px;
 }
 .container .navbar-brand {
   color: ghostwhite !important;
@@ -168,70 +223,11 @@ body {
   background: #1f1f1f url(img/index_background.png) no-repeat center center;
   background-size: cover;
   height: 100%;
-  padding-top: 40px;
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-}
-.whole-area {
-  background: #1f1f1f url(img/index_background.png) no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  padding-top: 40px;
-  margin: 0;
-  padding: 0;
-}
-.tcb-bs-fullscreen {
-  height: 100%;
-}
-.tcb-bs-fullscreen .carousel,
-.tcb-bs-fullscreen .item,
-.tcb-bs-fullscreen .active {
-  height: 100%;
-}
-.tcb-bs-fullscreen .carousel-inner {
-  height: 100%;
-}
-/****************************
-USE BACKGROUND IMAGES IN CAROUSEL SLIDER
-*****************************/
-.carousel-bg .carousel-inner .item {
-  background-color: darkslategrey;
-  background-size: cover;
-  background-position: center;
-  min-height: 360px;
-}
-.hr-text {
-  line-height: 1em;
-  position: relative;
-  outline: 0;
-  border: 0;
-  color: white;
-  text-align: center;
-  height: 1.5em;
-  opacity: 0.5;
-}
-.hr-text:before {
-  content: '';
-  position: absolute;
-  border: 1px solid white !important;
-  left: 0;
-  top: 50%;
-  width: 100px;
-  height: 1px;
-}
-.hr-text:after {
-  content: attr(data-content);
-  position: relative;
-  display: inline-block;
-  color: white !important;
-  padding: 0 0.5em;
-  line-height: 1.5em;
-  color: white;
-  background-color: transparent;
-  margin-left: -456px;
 }
 .full-left {
   background-color: transparent;
@@ -243,27 +239,14 @@ USE BACKGROUND IMAGES IN CAROUSEL SLIDER
   z-index: 5555555555555555;
   margin-bottom: 30px;
   margin-top: 30px;
-  /* .dot {
-       height:25px;
-       width:25px;
-       color:red;
-       border-radius: 50%;
-       display:inline-block;
-    }
-*/
-  /*.circle:before {
-        content: ' \25CF';
-        font-size: 100px;
-        color: red;
-        left: -5px;
-    }*/
 }
 .full-left .third-div {
   margin-left: 15px;
 }
 .full-left .last-div {
   margin-top: 40vh;
-  width: 200px;
+  width: 250px;
+  height: 100px;
 }
 .full-left .last-div .circle-div {
   border-radius: 200px 200px 200px 200px;
@@ -284,42 +267,34 @@ USE BACKGROUND IMAGES IN CAROUSEL SLIDER
 .full-left .last-div .circle-div .fas {
   font-size: 2em;
 }
-.full-left .last-div .about-us {
+.full-left .last-div .promotion-video {
   float: right;
+  width: 150px;
+  height: 68px;
 }
-.full-left .last-div .about-us .about {
-  margin-top: 7px;
-  padding-right: 25px;
+.full-left .last-div .promotion-video .about-us {
+  width: 150px;
+  height: 34px;
+  margin-bottom: 0px;
 }
-.full-left .last-div .about-us .hr-text2 {
-  line-height: 1em;
-  position: relative;
-  outline: 0;
-  border: 0;
+.full-left .last-div .promotion-video .about-us .about {
+  font-size: 15px;
+  font-weight: lighter;
+  padding-top: 10px;
   color: white;
-  text-align: center;
-  height: 1.5em;
-  opacity: 0.5;
 }
-.full-left .last-div .about-us .hr-text2:before {
-  content: ' ';
-  position: absolute;
-  border: 1px solid white !important;
-  left: 0;
-  top: 50%;
-  width: 100px;
-  height: 1px;
+.full-left .last-div .promotion-video .red-text {
+  width: 150px;
+  position: fixed;
+  display: block;
+  height: 34px;
+  border-top: solid white;
 }
-.full-left .last-div .about-us .hr-text2:after {
-  content: 'Promotion video';
-  position: relative;
-  display: inline-block;
-  color: white !important;
-  padding: 0 0.5em;
-  line-height: 1.5em;
-  color: red;
-  background-color: transparent;
-  margin-left: -6px;
+.full-left .last-div .promotion-video .red-text .promotion {
+  color: indianred;
+  font-size: 18px;
+  font-weight: lighter;
+  padding-top: 5px;
 }
 .full-left .craft-design {
   color: white;
@@ -331,12 +306,7 @@ USE BACKGROUND IMAGES IN CAROUSEL SLIDER
   left: 10px;
   margin-top: 0px !important;
   line-height: 110px;
-  /*&:after {
-            content: '.';
-            color: red;
-            font-size: 120px;
-            border-radius: 30px;
-        }*/
+  font-family: Arial;
 }
 .full-left .craft-design:after {
   content: ' \25CF';
@@ -355,4 +325,49 @@ USE BACKGROUND IMAGES IN CAROUSEL SLIDER
   font-weight: lighter;
   margin-top: -10px;
   line-height: 25px;
+  font-family: Arial !important;
+}
+.full-left .label-cre {
+  color: white;
+  position: relative;
+  width: 33%;
+  text-align: right;
+}
+.full-left .label-cre:before {
+  content: '';
+  width: 135px;
+  height: 1px;
+  position: absolute;
+  top: 10px;
+  background-color: white;
+  left: 0;
+}
+.full-left .hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: white;
+  text-align: center;
+  height: 1.5em;
+  opacity: 0.5;
+}
+.full-left .hr-text:before {
+  content: '';
+  position: relative;
+  border: 1px solid white !important;
+  left: 0;
+  top: 50%;
+  width: 100px;
+  height: 1px;
+}
+.full-left .hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: white !important;
+  padding: 0 0.5em;
+  line-height: 1.5em;
+  color: white;
+  background-color: transparent;
 }

@@ -3,13 +3,13 @@ background: rgb(38,44,64);
 background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.4822303921568627) 100%);
  Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
 
 background: rgb(38,44,64);
 background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.4822303921568627) 100%);
 
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 @nav-bg: #2b3033;
 @blue: #5fc7ea;
 @red: #e68568;
@@ -18,7 +18,7 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
 @ease: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 @content-animation: scale(0.7) rotateX(-230deg);
 @black: bl;
-
+@navbar-length:1366px;
 .vertical-div {
     background-color: black;
     transform: rotate(90deg);
@@ -48,29 +48,78 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
     padding-top: 20px;
     transform: rotate(-180deg);
 
-    a {
+        .behance {
+            line-height: 200px;
+            padding-left: 35px;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: ghostwhite;
+            display: block;
+            transform: rotate(-270deg);
+            margin-top: 30px;
+
+
+            &:hover {
+                color: #edeaea;
+            }
+        }
+
+        .linkedin {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            line-height: 177px;
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: ghostwhite;
+            display: block;
+            transform: rotate(-270deg);
+            margin-top: 30px;
+
+
+            &:hover {
+                color: #edeaea;
+            }
+        }
+  
+
+    .brand {
+        height: 410px;
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        flex-direction: row-reverse;
+
+        h1 {
+            align-self: flex-end;
+            padding: 20px 8px 6px 16px;
+            font-size: 25px;
+            color: #818181;
+            //     display: block;
+            transform: rotate(180deg);
+            //  margin-top: 58vh;
+        }
+    }
+    /*    a {
         padding: 6px 8px 6px 16px;
         text-decoration: none;
-        font-size: 25px;
+        font-size: 20px;
         color: ghostwhite;
         display: block;
         transform: rotate(-270deg);
-        margin-top: 10vh;
+        margin-top: 30px;
 
 
         &:hover {
             color: #edeaea;
         }
-    }
-
-    h1 {
-        padding: 6px 8px 6px 16px;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transform: rotate(180deg);
-        margin-top: 58vh;
-    }
+    }*/
 }
 
 .brand-pos {
@@ -122,8 +171,8 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
     top:33px;
 }
 body {
-    background-color: #545252;
-    color: #fff;
+    background-color: #151313 !important;
+   // color: #fff;
 }
 
 .carousel {
@@ -139,7 +188,9 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-
+.carousel-pos{
+    position:absolute;
+}
 /*.next-prev {
     top: 900px;
     -webkit-transform: none;
@@ -148,8 +199,8 @@ body {
 .carousel-control-prev,
 .carousel-control-next {
     align-items: flex-end;
-    top:150px;
-     /* Aligns it at the bottom */
+    top: 150px;
+    /* Aligns it at the bottom */
 }
 /*.carousel-control-next{
     .next-prev{
@@ -163,15 +214,30 @@ body {
     
 }
 
-
+.first-nav{
+    width:700px;
+  
+}
 .second-nav {
-    margin-left: 65vh !important;
+    //  margin-left: 65vh !important;
     /*float:right;*/
+    width: @navbar-length - 700;
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+    flex-direction: row-reverse;
+ 
 }
 
 .border-button {
-    border: 2px solid red;
+    border: 2px solid #f00;
     border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 156px;
+
+   
 }
 @media (min-width: 992px) {
     .navbar-expand-lg {
@@ -184,13 +250,6 @@ body {
     }
 }
 
-
-
-.main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
-}
 
 .container {
     .navbar-brand {
@@ -222,7 +281,6 @@ body {
     background: #1f1f1f url(img/index_background.png) no-repeat center center;
     background-size: cover;
     height: 100%;
-    padding-top: 40px;
     margin: 0;
     padding: 0;
     font-family: "Lato", sans-serif;
@@ -230,79 +288,10 @@ body {
     -webkit-font-smoothing: antialiased;
  //   background: rgb(38,44,64);
   //  background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.4822303921568627) 100%);
-} 
-
-.whole-area {
-    background: #1f1f1f url(img/index_background.png) no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    padding-top: 40px;
-    margin: 0;
-    padding: 0;
-}
-.tcb-bs-fullscreen {
-    height: 100%;
-
-    .carousel,
-    .item,
-    .active {
-        height: 100%;
-    }
-
-    .carousel-inner {
-        height: 100%;
-    }
-}
-/****************************
-USE BACKGROUND IMAGES IN CAROUSEL SLIDER
-*****************************/
-.carousel-bg {
-    .carousel-inner {
-        .item {
-            background-color: darkslategrey;
-            background-size: cover;
-            background-position: center;
-            min-height: 360px;
-           
-        }
-    }
 }
 
-.hr-text {
-    line-height: 1em;
-    position: relative;
-    outline: 0;
-    border: 0;
-    color: white;
-    text-align: center;
-    height: 1.5em;
-    opacity: .5;
 
-    &:before {
-        content: '';
-        // use the linear-gradient for the fading effect
-        // use a solid background color for a solid bar
-        position: absolute;
-        border: 1px solid white !important;
-        left: 0;
-        top: 50%;
-        width: 100px;
-        height: 1px;
-    }
 
-    &:after {
-        content: attr(data-content);
-        position: relative;
-        display: inline-block;
-        color: white !important;
-        padding: 0 .5em;
-        line-height: 1.5em;
-        // this is really the only tricky part, you need to specify the background color of the container element...
-        color: white;
-        background-color: transparent;
-        margin-left: -456px;
-    }
-}
 .full-left {
     background-color: transparent;
     width: 903px !important;
@@ -321,7 +310,8 @@ USE BACKGROUND IMAGES IN CAROUSEL SLIDER
 
     .last-div {
         margin-top: 40vh;
-        width: 200px;
+        width: 250px;
+        height: 100px;
 
         .circle-div {
             border-radius: 200px 200px 200px 200px;
@@ -345,47 +335,36 @@ USE BACKGROUND IMAGES IN CAROUSEL SLIDER
             }
         }
 
-        .about-us {
+        .promotion-video {
             float: right;
+            width: 150px;
+            height: 68px;
 
-            .about {
-                margin-top: 7px;
-                padding-right:25px;
+            .about-us {
+                width: 150px;
+                height: 34px;
+                margin-bottom: 0px;
+
+                .about {
+                    font-size: 15px;
+                    font-weight: lighter;
+                    padding-top: 10px;
+                    color: white;
+                }
             }
 
-            .hr-text2 {
-                line-height: 1em;
-                position: relative;
-                outline: 0;
-                border: 0;
-                color: white;
-                text-align: center;
-                height: 1.5em;
-                opacity: .5;
+            .red-text {
+                width: 150px;
+                position: fixed;
+                display: block;
+                height: 34px;
+                border-top: solid white;
 
-                &:before {
-                    content: ' ';
-                    // use the linear-gradient for the fading effect
-                    // use a solid background color for a solid bar
-                    position: absolute;
-                    border: 1px solid white !important;
-                    left: 0;
-                    top: 50%;
-                    width: 100px;
-                    height: 1px;
-                }
-
-                &:after {
-                    content: 'Promotion video';
-                    position: relative;
-                    display: inline-block;
-                    color: white !important;
-                    padding: 0 .5em;
-                    line-height: 1.5em;
-                    // this is really the only tricky part, you need to specify the background color of the container element...
-                    color: red;
-                    background-color: transparent;
-                    margin-left: -6px;
+                .promotion {
+                    color: indianred;
+                    font-size: 18px;
+                    font-weight: lighter;
+                    padding-top: 5px;
                 }
             }
         }
@@ -401,12 +380,9 @@ USE BACKGROUND IMAGES IN CAROUSEL SLIDER
         left: 10px;
         margin-top: 0px !important;
         line-height: 110px;
-        /*&:after {
-            content: '.';
-            color: red;
-            font-size: 120px;
-            border-radius: 30px;
-        }*/
+        font-family: Arial;
+
+
         &:after {
             content: ' \25CF';
             font-size: 45px;
@@ -419,20 +395,7 @@ USE BACKGROUND IMAGES IN CAROUSEL SLIDER
     .second-div {
         margin-top: 35px;
     }
-    /* .dot {
-       height:25px;
-       width:25px;
-       color:red;
-       border-radius: 50%;
-       display:inline-block;
-    }
-*/
-    /*.circle:before {
-        content: ' \25CF';
-        font-size: 100px;
-        color: red;
-        left: -5px;
-    }*/
+
     .create-tech {
         color: #fff !important;
         float: left;
@@ -440,5 +403,61 @@ USE BACKGROUND IMAGES IN CAROUSEL SLIDER
         font-weight: lighter;
         margin-top: -10px;
         line-height: 25px;
+        font-family: Arial !important;
+    }
+
+    .label-cre{
+        color:white;
+        position:relative;
+        width:33%;
+        text-align:right;
+        &:before{
+            content:'';
+            width:135px;
+            height:1px;
+            position:absolute;
+            top:10px;
+            background-color:white;
+            left:0;
+
+
+        }
+
+
+    }
+    .hr-text {
+        line-height: 1em;
+        position: relative;
+        outline: 0;
+        border: 0;
+        color: white;
+        text-align: center;
+        height: 1.5em;
+        opacity: .5;
+
+        &:before {
+            content: '';
+            // use the linear-gradient for the fading effect
+            // use a solid background color for a solid bar
+            position: relative;
+            border: 1px solid white !important;
+            left: 0;
+            top: 50%;
+            width: 100px;
+            height: 1px;
+        }
+
+        &:after {
+            content: attr(data-content);
+            position: relative;
+            display: inline-block;
+            color: white !important;
+            padding: 0 .5em;
+            line-height: 1.5em;
+            // this is really the only tricky part, you need to specify the background color of the container element...
+            color: white;
+            background-color: transparent;
+            // margin-left: -456px;
+        }
     }
 }
