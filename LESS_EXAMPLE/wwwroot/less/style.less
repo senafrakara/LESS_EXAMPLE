@@ -10,43 +10,47 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
 
 */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@font-face {
+    font-family: "EuclidFlex";
+    src: url(''); /* IE9*/
+    src: url('../fonts/EuclidFlex-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/EuclidFlex.otf') format('opentype'), /* chrome、firefox */
+    url('../fonts/EuclidFlex-Regular.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/EuclidFlex-Regular.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  //  url("9a371d89686ca20657a03103f2f09df0.svg#Euclid Flex Trial Bold") format("svg"); /* iOS 4.1- */
+}
 @nav-bg: #2b3033;
-@blue: #5fc7ea;
-@red: #e68568;
-@yellow: #e6d068;
-@green: #68e6ac;
-@ease: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-@content-animation: scale(0.7) rotateX(-230deg);
-@black: bl;
-@navbar-length:1366px;
-.vertical-div {
-    background-color: black;
-    transform: rotate(90deg);
-    width: 100%;
-    height: 60px;
-    align-items: flex-end;
 
-    ul {
-        li {
-            a {
-                color: wheat;
-                font-size: 15px;
-            }
-        }
-    }
+@navbar-length:1366px;
+.demo {
+    font-family: "EuclidFlex", Arial, sans-serif !important;
+    font-size: 16px;
+    font-style: normal;
+ /*   -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;*/
+}
+.demo2 {
+    font-variant-ligatures: discretionary-ligatures;
+    -moz-font-feature-settings: "dlig";
+    -webkit-font-feature-settings: "dlig";
+    font-feature-settings: "dlig";
 }
 
-.sidenav {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 999999;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 20px;
-    transform: rotate(-180deg);
+.main-title {
+    position:relative;
+
+    .sidenav {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 999999;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+        transform: rotate(-180deg);
 
         .behance {
             line-height: 200px;
@@ -86,42 +90,28 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
                 color: #edeaea;
             }
         }
-  
 
-    .brand {
-        height: 410px;
-        align-items: flex-start;
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-        flex-direction: row-reverse;
 
-        h1 {
-            align-self: flex-end;
-            padding: 20px 8px 6px 16px;
-            font-size: 25px;
-            color: #818181;
-            //     display: block;
-            transform: rotate(180deg);
-            //  margin-top: 58vh;
+        .brand {
+            height: 410px;
+            align-items: flex-start;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            flex-direction: row-reverse;
+
+            h1 {
+                align-self: flex-end;
+                padding: 20px 8px 6px 16px;
+                font-size: 25px;
+                color: #818181;
+                //     display: block;
+                transform: rotate(180deg);
+                //  margin-top: 58vh;
+            }
         }
     }
-    /*    a {
-        padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 20px;
-        color: ghostwhite;
-        display: block;
-        transform: rotate(-270deg);
-        margin-top: 30px;
-
-
-        &:hover {
-            color: #edeaea;
-        }
-    }*/
 }
-
 .brand-pos {
     margin-left: 30vh;
     color: ghostwhite !important;
@@ -191,23 +181,14 @@ body {
 .carousel-pos{
     position:absolute;
 }
-/*.next-prev {
-    top: 900px;
-    -webkit-transform: none;
-    transform: none;
-}*/
+
 .carousel-control-prev,
 .carousel-control-next {
     align-items: flex-end;
     top: 150px;
-    /* Aligns it at the bottom */
-}
-/*.carousel-control-next{
-    .next-prev{
-        right:10px;
-    }
 
-}*/
+}
+
 .carousel-control-prev {
         left: auto;
         right: 60px;
@@ -303,15 +284,29 @@ body {
     margin-bottom: 30px;
     margin-top: 30px;
 
+    .first-div {
+        position: relative;
+    }
+
     .third-div {
         margin-left: 15px;
+        position:relative;
+        margin-bottom:30px;
     }
+
+    .second-div {
+        position:relative;
+        margin-top: 35px;
+    }
+
 
 
     .last-div {
         margin-top: 40vh;
         width: 250px;
         height: 100px;
+        margin-top:30px;
+        position:relative;
 
         .circle-div {
             border-radius: 200px 200px 200px 200px;
@@ -321,7 +316,7 @@ body {
             background-color: #e62b2b;
             width: 80px;
             height: 80px;
-            position: absolute;
+            position: relative;
             float: left;
 
             .red-play {
@@ -355,7 +350,7 @@ body {
 
             .red-text {
                 width: 150px;
-                position: fixed;
+                position: absolute;
                 display: block;
                 height: 34px;
                 border-top: solid white;
@@ -387,14 +382,11 @@ body {
             content: ' \25CF';
             font-size: 45px;
             color: red;
-            left: -38px;
+            left: -30px;
             position: relative;
         }
     }
 
-    .second-div {
-        margin-top: 35px;
-    }
 
     .create-tech {
         color: #fff !important;
@@ -406,58 +398,36 @@ body {
         font-family: Arial !important;
     }
 
-    .label-cre{
-        color:white;
-        position:relative;
-        width:33%;
-        text-align:right;
-        &:before{
-            content:'';
-            width:135px;
-            height:1px;
-            position:absolute;
-            top:10px;
-            background-color:white;
-            left:0;
-
-
-        }
-
-
-    }
-    .hr-text {
-        line-height: 1em;
-        position: relative;
-        outline: 0;
-        border: 0;
+    .label-cre {
         color: white;
-        text-align: center;
-        height: 1.5em;
-        opacity: .5;
+        position: relative;
+        width: 33%;
+        text-align: right;
 
         &:before {
             content: '';
-            // use the linear-gradient for the fading effect
-            // use a solid background color for a solid bar
-            position: relative;
-            border: 1px solid white !important;
-            left: 0;
-            top: 50%;
-            width: 100px;
+            width: 135px;
             height: 1px;
-        }
-
-        &:after {
-            content: attr(data-content);
-            position: relative;
-            display: inline-block;
-            color: white !important;
-            padding: 0 .5em;
-            line-height: 1.5em;
-            // this is really the only tricky part, you need to specify the background color of the container element...
-            color: white;
-            background-color: transparent;
-            // margin-left: -456px;
+            position: absolute;
+            top: 10px;
+            background-color: white;
+            left: 0;
         }
     }
 }
+/*.vertical-div {
+    background-color: black;
+    transform: rotate(90deg);
+    width: 100%;
+    height: 60px;
+    align-items: flex-end;
+
+    ul {
+        li {
+            a {
+                color: wheat;
+                font-size: 15px;
+            }
+        }
+    }
+}*/

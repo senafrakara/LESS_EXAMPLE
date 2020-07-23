@@ -14,66 +14,67 @@
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link href="~/fonts/Euclid Flex Trial Bold.otf" rel="stylesheet" />
   
-
 
 </head>
 <body>
     <header> 
-        <div class="row">
-            <div class="col-md-2">
-                <div class="sidenav">
+        <div class="container-fluid main-title">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="sidenav">
 
 
-                    <a href="#" class="behance">BEHANCE</a>
-                    <a href="#" class="linkedin">LINKEDIN</a>
-                    <div class="brand">
-                        <h1>Nursena.</h1>
+                        <a href="#" class="behance">BEHANCE</a>
+                        <a href="#" class="linkedin">LINKEDIN</a>
+                        <div class="brand">
+                            <h1>Nursena.</h1>
+                        </div>
+
                     </div>
-                    
+                </div>
+                <div class="col-lg-10">
+                    <nav class="navbar transparent  navbar-expand-lg  fixed-top navbar-height ">
+                        <div class="container-fluid">
+                            <a class="navbar-brand navbar-brand mr-0 mr-md-5 brand-pos" href="#" style="text-align:left">CROPE.</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarResponsive">
+                                <ul class="navbar-nav bd-navbar-nav flex-row first-nav">
+
+                                    <li class="nav-item nav-items">
+                                        <a class="nav-link" href="#">Services</a>
+                                    </li>
+                                    <li class="nav-item nav-items">
+                                        <a class="nav-link" href="#">Coses</a>
+                                    </li>
+                                    <li class="nav-item nav-items">
+                                        <a class="nav-link" href="#">Contact Us</a>
+                                    </li>
+                                </ul>
+                                <div class=" second-nav">
+                                    <ul class="navbar-nav ml-auto">
+
+                                        <li class="nav-item nav-items ">
+                                            <a class="nav-link" href="#">+1 11215 15121 </a>
+                                        </li>
+                                        <li class="nav-item nav-items border-button ">
+                                            <a class="nav-link " style="padding:10px;" href="#">Get a quote</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </nav>
+
                 </div>
             </div>
-            <div class="col-md-10">
-                <nav class="navbar transparent  navbar-expand-lg  fixed-top navbar-height ">
-                    <div class="container-fluid">
-                        <a class="navbar-brand navbar-brand mr-0 mr-md-5 brand-pos" href="#" style="text-align:left">CROPE.</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarResponsive">
-                            <ul class="navbar-nav bd-navbar-nav flex-row first-nav">
-
-                                <li class="nav-item nav-items">
-                                    <a class="nav-link" href="#">Services</a>
-                                </li>
-                                <li class="nav-item nav-items">
-                                    <a class="nav-link" href="#">Coses</a>
-                                </li>
-                                <li class="nav-item nav-items">
-                                    <a class="nav-link" href="#">Contact Us</a>
-                                </li>
-                            </ul>
-                            <div class=" second-nav">
-                                <ul class="navbar-nav ml-auto">
-
-                                    <li class="nav-item nav-items ">
-                                        <a class="nav-link" href="#">+1 11215 15121 </a>
-                                    </li>
-                                    <li class="nav-item nav-items border-button ">
-                                        <a class="nav-link " style="padding:10px;" href="#">Get a quote</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </nav>
-
-            </div>
         </div>
-
 
     </header>
     <div class=" container-fluid">
@@ -81,18 +82,18 @@
 
         @RenderBody()
        
-        <div class="row">
-            <div class="col-md-5">
-                <div class="col-md-2">
+        @*<div class="row">
+            <div class="col-lg-5">
+                <div class="col-lg-2">
               
                 </div>
-                <div class="col-md-3">
-                    @*<div class="main-text">
+                <div class="col-lg-3">
+                    <div class="main-text">
                        <span class="main-span">Creative Ideas</span>
-                    </div>*@
+                    </div>
 
                     <div class="float-xl-right full-left">
-                        <div class="align-items-xl-start">
+                        <div class="align-items-xl-start first-div">
                             
                             <label class="label-cre">CREATIVE IDEAS</label>
                         </div>
@@ -106,8 +107,8 @@
                         <div class="align-items-xl-start third-div">
                             <p class="create-tech">We create new technologies for your business thanks</p>
                             <br />
-                            <p class="create-tech"> to our wonderful team of professionals.</p>
-                            
+                            <p class="create-tech">to our wonderful team of professionals.</p>
+                           
                         </div>
 
                         <div class="align-items-xl-start last-div">
@@ -132,7 +133,7 @@
                 </div>
      
             </div>
-            <div class="col-md-7">
+            <div class="col-lg-7">
                 <div id="carouselExampleIndicators" class="carousel slide carousel-pos" data-ride="carousel">
                     
                     <div class="carousel-inner">
@@ -156,7 +157,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div>*@
     </div>
 
     <footer>

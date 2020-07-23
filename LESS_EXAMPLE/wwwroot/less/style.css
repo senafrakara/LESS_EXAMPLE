@@ -16,18 +16,30 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/playfairdisplay/v21/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf) format('truetype');
 }
-.vertical-div {
-  background-color: black;
-  transform: rotate(90deg);
-  width: 100%;
-  height: 60px;
-  align-items: flex-end;
+@font-face {
+  font-family: "EuclidFlex";
+  src: url('');
+  /* IE9*/
+  src: url('../fonts/EuclidFlex-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/EuclidFlex.otf') format('opentype'), /* chrome、firefox */ url('../fonts/EuclidFlex-Regular.woff') format('woff'), /* chrome、firefox */ url('../fonts/EuclidFlex-Regular.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/;
 }
-.vertical-div ul li a {
-  color: wheat;
-  font-size: 15px;
+.demo {
+  font-family: "EuclidFlex", Arial, sans-serif !important;
+  font-size: 16px;
+  font-style: normal;
+  /*   -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;*/
 }
-.sidenav {
+.demo2 {
+  font-variant-ligatures: discretionary-ligatures;
+  -moz-font-feature-settings: "dlig";
+  -webkit-font-feature-settings: "dlig";
+  font-feature-settings: "dlig";
+}
+.main-title {
+  position: relative;
+}
+.main-title .sidenav {
   height: 100%;
   width: 160px;
   position: fixed;
@@ -38,22 +50,8 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
   overflow-x: hidden;
   padding-top: 20px;
   transform: rotate(-180deg);
-  /*    a {
-        padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 20px;
-        color: ghostwhite;
-        display: block;
-        transform: rotate(-270deg);
-        margin-top: 30px;
-
-
-        &:hover {
-            color: #edeaea;
-        }
-    }*/
 }
-.sidenav .behance {
+.main-title .sidenav .behance {
   line-height: 200px;
   padding-left: 35px;
   display: flex;
@@ -67,10 +65,10 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
   transform: rotate(-270deg);
   margin-top: 30px;
 }
-.sidenav .behance:hover {
+.main-title .sidenav .behance:hover {
   color: #edeaea;
 }
-.sidenav .linkedin {
+.main-title .sidenav .linkedin {
   display: flex;
   justify-content: center;
   align-self: center;
@@ -83,10 +81,10 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
   transform: rotate(-270deg);
   margin-top: 30px;
 }
-.sidenav .linkedin:hover {
+.main-title .sidenav .linkedin:hover {
   color: #edeaea;
 }
-.sidenav .brand {
+.main-title .sidenav .brand {
   height: 410px;
   align-items: flex-start;
   display: flex;
@@ -94,7 +92,7 @@ background: linear-gradient(90deg, rgba(38,44,64,1) 0%, rgba(0,0,0,0.48223039215
   margin-top: 30px;
   flex-direction: row-reverse;
 }
-.sidenav .brand h1 {
+.main-title .sidenav .brand h1 {
   align-self: flex-end;
   padding: 20px 8px 6px 16px;
   font-size: 25px;
@@ -156,23 +154,11 @@ body {
 .carousel-pos {
   position: absolute;
 }
-/*.next-prev {
-    top: 900px;
-    -webkit-transform: none;
-    transform: none;
-}*/
 .carousel-control-prev,
 .carousel-control-next {
   align-items: flex-end;
   top: 150px;
-  /* Aligns it at the bottom */
 }
-/*.carousel-control-next{
-    .next-prev{
-        right:10px;
-    }
-
-}*/
 .carousel-control-prev {
   left: auto;
   right: 60px;
@@ -240,13 +226,24 @@ body {
   margin-bottom: 30px;
   margin-top: 30px;
 }
+.full-left .first-div {
+  position: relative;
+}
 .full-left .third-div {
   margin-left: 15px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.full-left .second-div {
+  position: relative;
+  margin-top: 35px;
 }
 .full-left .last-div {
   margin-top: 40vh;
   width: 250px;
   height: 100px;
+  margin-top: 30px;
+  position: relative;
 }
 .full-left .last-div .circle-div {
   border-radius: 200px 200px 200px 200px;
@@ -256,7 +253,7 @@ body {
   background-color: #e62b2b;
   width: 80px;
   height: 80px;
-  position: absolute;
+  position: relative;
   float: left;
 }
 .full-left .last-div .circle-div .red-play {
@@ -285,7 +282,7 @@ body {
 }
 .full-left .last-div .promotion-video .red-text {
   width: 150px;
-  position: fixed;
+  position: absolute;
   display: block;
   height: 34px;
   border-top: solid white;
@@ -312,11 +309,8 @@ body {
   content: ' \25CF';
   font-size: 45px;
   color: red;
-  left: -38px;
+  left: -30px;
   position: relative;
-}
-.full-left .second-div {
-  margin-top: 35px;
 }
 .full-left .create-tech {
   color: #fff !important;
@@ -342,32 +336,19 @@ body {
   background-color: white;
   left: 0;
 }
-.full-left .hr-text {
-  line-height: 1em;
-  position: relative;
-  outline: 0;
-  border: 0;
-  color: white;
-  text-align: center;
-  height: 1.5em;
-  opacity: 0.5;
-}
-.full-left .hr-text:before {
-  content: '';
-  position: relative;
-  border: 1px solid white !important;
-  left: 0;
-  top: 50%;
-  width: 100px;
-  height: 1px;
-}
-.full-left .hr-text:after {
-  content: attr(data-content);
-  position: relative;
-  display: inline-block;
-  color: white !important;
-  padding: 0 0.5em;
-  line-height: 1.5em;
-  color: white;
-  background-color: transparent;
-}
+/*.vertical-div {
+    background-color: black;
+    transform: rotate(90deg);
+    width: 100%;
+    height: 60px;
+    align-items: flex-end;
+
+    ul {
+        li {
+            a {
+                color: wheat;
+                font-size: 15px;
+            }
+        }
+    }
+}*/
